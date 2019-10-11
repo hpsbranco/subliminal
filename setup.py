@@ -25,8 +25,6 @@ def find_version(*file_paths):
 
 
 # requirements
-setup_requirements = ['pytest-runner'] if {'pytest', 'test', 'ptr'}.intersection(sys.argv) else []
-
 install_requirements = ['guessit>=3.0.0', 'babelfish>=0.5.2', 'enzyme>=0.4.1', 'beautifulsoup4>=4.4.0',
                         'requests>=2.0', 'click>=4.0', 'dogpile.cache>=0.6.0', 'stevedore>=1.20.0',
                         'chardet>=2.3.0', 'pysrt>=1.0.1', 'six>=1.9.0', 'appdirs>=1.3', 'rarfile>=2.7',
@@ -34,9 +32,15 @@ install_requirements = ['guessit>=3.0.0', 'babelfish>=0.5.2', 'enzyme>=0.4.1', '
 if sys.version_info < (3, 2):
     install_requirements.append('futures>=3.0')
 
-test_requirements = ['sympy', 'vcrpy>=1.6.1', 'pytest', 'pytest-pep8', 'pytest-flakes', 'pytest-cov']
+test_requirements = ['sympy', 'vcrpy>=1.6.1']
 if sys.version_info < (3, 3):
     test_requirements.append('mock')
+if sys.version_info < (3, 5):
+    test_requirements.append('pytest<5')
+else:
+    test_requirements.append('pytest')
+
+test_requirements.extend(['pytest-pep8', 'pytest-flakes', 'pytest-cov'])
 
 dev_requirements = ['tox', 'sphinx', 'sphinx_rtd_theme', 'sphinxcontrib-programoutput', 'wheel']
 
@@ -95,9 +99,7 @@ setup(name='subliminal',
               'subliminal = subliminal.cli:subliminal'
           ]
       },
-      setup_requires=setup_requirements,
       install_requires=install_requirements,
-      tests_require=test_requirements,
       extras_require={
           'test': test_requirements,
           'dev': dev_requirements
