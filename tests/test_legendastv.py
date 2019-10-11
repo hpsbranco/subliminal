@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
+from collections import OrderedDict
 
 from babelfish import Language, language_converters
 import pytest
@@ -307,6 +308,22 @@ def test_list_subtitles_movie(movies):
     with LegendasTVProvider(USERNAME, PASSWORD) as provider:
         subtitles = provider.list_subtitles(video, languages)
     assert {(s.archive.id, s.name) for s in subtitles} == expected_subtitles
+
+
+@pytest.mark.integration
+@vcr.use_cassette
+def test_list_subtitles_return_order(episodes):
+    video = episodes['colony_s01e09']
+    languages = {Language('por', 'BR')}
+    expected = [
+        (False, True),  # featured
+        (True, False),  # pack
+        (False, False)  # neither
+    ]
+    with LegendasTVProvider(USERNAME, PASSWORD) as provider:
+        subtitles = provider.list_subtitles(video, languages)
+    actual = OrderedDict.fromkeys((s.archive.pack, s.archive.featured) for s in subtitles)
+    assert list(actual) == expected
 
 
 @pytest.mark.integration

@@ -493,7 +493,7 @@ class LegendasTVProvider(Provider):
             subtitles = [s for l in languages for s in
                          self.query(l, title, season=season, episodes=episodes, year=video.year)]
             if subtitles:
-                return subtitles
+                return sorted(subtitles, key=lambda s: (s.archive.featured, s.archive.pack), reverse=True)
 
         return []
 
