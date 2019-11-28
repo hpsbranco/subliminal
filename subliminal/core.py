@@ -9,6 +9,7 @@ import operator
 import os
 
 from babelfish import Language, LanguageReverseError
+from ftfy import fix_text
 from guessit import guessit
 from rarfile import BadRarFile, NotRarFile, RarCannotExec, RarFile, Error, is_rarfile
 from zipfile import BadZipfile
@@ -702,7 +703,7 @@ def save_subtitles(video, subtitles, single=False, directory=None, encoding=None
                 f.write(subtitle.content)
         else:
             with io.open(subtitle_path, 'w', encoding=encoding) as f:
-                f.write(subtitle.text)
+                f.write(fix_text(subtitle.text))
         saved_subtitles.append(subtitle)
 
         # check single

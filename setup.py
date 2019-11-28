@@ -29,6 +29,11 @@ install_requirements = ['guessit>=3.0.0', 'babelfish>=0.5.2', 'enzyme>=0.4.1', '
                         'requests>=2.0', 'click>=4.0', 'dogpile.cache>=0.6.0', 'stevedore>=1.20.0',
                         'chardet>=2.3.0', 'pysrt>=1.0.1', 'six>=1.9.0', 'appdirs>=1.3', 'rarfile>=2.7',
                         'pytz>=2012c']
+if sys.version_info.major < 3:
+    install_requirements.append('ftfy>=4.4.3,<5')
+else:
+    install_requirements.append('ftfy>=5.6')
+
 if sys.version_info < (3, 2):
     install_requirements.append('futures>=3.0')
 
