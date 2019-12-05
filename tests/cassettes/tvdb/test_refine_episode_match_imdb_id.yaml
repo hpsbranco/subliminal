@@ -1,0 +1,331 @@
+interactions:
+- request:
+    body: '{"apikey": "5EC930FB90DA1ADA", "username": null, "password": null}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '66'
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Subliminal/2.1
+    method: POST
+    uri: https://api.thetvdb.com/login
+  response:
+    body:
+      string: '{"token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzU1NjY1NTksImlkIjoic3VibGltaW5hbCIsIm9yaWdfaWF0IjoxNTc0OTYxNzU5fQ.Qp0pwiik4yHa7n5GnLp92WGkXupxL2g1i-04CaoGcaZmJ1LULNgSB3xYni8UG8dvllYUlJ2V2gwdPmoILoL7e3DzwoJnLULl7oLgz_XBdrH-x74Sxo782FtXaQyL33Holr4royYJxhOMdDaBmpW03Il6E-XHAD5Ydd5s5UILYup2IQXTHgatPT9HBo0xsHY8fTD35l8eFrknCVjr_L9DDlVqsUhW_yZeTRucJ9OrQ9wKlqeAC6Of18XAjDyiAdmJu0Uv5GhmUR_S4D5mEMhAMW2wJPsNCjjq8B1vmoK-EiEEDgpCbdxUfNr1XCxaNHJi295I58WTMy7SKS10vCPDDA"}'
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '470'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 28 Nov 2019 17:22:39 GMT
+      Vary:
+      - Accept-Language
+      Via:
+      - 1.1 76ebb2b2a599c264ac624f33b5da568f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - YLs5v_KrlaTYJpyYqEaKtQ1El-bvP2YyupRg2OlsihJFGgkCcBeHuw==
+      X-Amz-Cf-Pop:
+      - GIG51-C2
+      X-Cache:
+      - Miss from cloudfront
+      X-Powered-By:
+      - Thundar!
+      X-Thetvdb-Api-Version:
+      - 3.0.0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzU1NjY1NTksImlkIjoic3VibGltaW5hbCIsIm9yaWdfaWF0IjoxNTc0OTYxNzU5fQ.Qp0pwiik4yHa7n5GnLp92WGkXupxL2g1i-04CaoGcaZmJ1LULNgSB3xYni8UG8dvllYUlJ2V2gwdPmoILoL7e3DzwoJnLULl7oLgz_XBdrH-x74Sxo782FtXaQyL33Holr4royYJxhOMdDaBmpW03Il6E-XHAD5Ydd5s5UILYup2IQXTHgatPT9HBo0xsHY8fTD35l8eFrknCVjr_L9DDlVqsUhW_yZeTRucJ9OrQ9wKlqeAC6Of18XAjDyiAdmJu0Uv5GhmUR_S4D5mEMhAMW2wJPsNCjjq8B1vmoK-EiEEDgpCbdxUfNr1XCxaNHJi295I58WTMy7SKS10vCPDDA
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Subliminal/2.1
+    method: GET
+    uri: https://api.thetvdb.com/search/series?name=blue+bloods
+  response:
+    body:
+      string: "{\"data\":[{\"aliases\":[\"Blue Bloods - Crime Scene New York\",\"Familia
+        de Polic\xEDas\",\"\u57F7\u6CD5\u5C0A\u5BB6\"],\"banner\":\"/banners/posters/164981-1.jpg\",\"firstAired\":null,\"id\":164981,\"network\":\"CBS\",\"overview\":\"Blue
+        Bloods is a drama about a multi-generational family of cops dedicated to New
+        York City law enforcement. Frank Reagan is the New York Police Commissioner
+        and heads both the police force and the Reagan brood. He runs his department
+        as diplomatically as he runs his family, even when dealing with the politics
+        that plagued his unapologetically bold father, Henry, during his stint as
+        Chief.\",\"seriesName\":\"Blue Bloods\",\"slug\":\"blue-bloods\",\"status\":\"Continuing\"},{\"aliases\":[],\"banner\":\"/bannershttps://beta.thetvdb.com/images/missing/movie.jpg\",\"firstAired\":null,\"id\":280905,\"network\":\"ZDF\",\"seriesName\":\"Blue
+        Blood\",\"slug\":\"blue-blood\",\"status\":\"Ended\"},{\"aliases\":[\"Red
+        vs Blue: The Blood Gulch Chronicles\",\"Red vs Blue The Blood Gulch Chronicles\",\"Red
+        vs Blue\",\"RvB\",\"Red vs. Blue: The Blood Gulch Chronicles\"],\"banner\":\"/banners/posters/78896-4.jpg\",\"firstAired\":null,\"id\":78896,\"network\":\"Rooster
+        Teeth\",\"overview\":\"Red vs. Blue centers on the Red and Blue Teams, two
+        groups of soldiers engaged in a civil war. Each team occupies a small base
+        in a box canyon known as Blood Gulch. According to Simmons (Gustavo Sorola),
+        one of the Red Team soldiers, each team's base exists only in response to
+        the other team's base. Although both teams generally dislike each other and
+        have standing orders to defeat their opponents and capture their flag, neither
+        team's soldiers are usually motivated to fight each other- if they are otherwise,
+        neither are efficient. Teammates have an array of eccentric personalities
+        and often create more problems for each other than for their enemies.\",\"seriesName\":\"Red
+        vs. Blue\",\"slug\":\"red-vs-blue\",\"status\":\"Continuing\"},{\"aliases\":[],\"banner\":\"/banners/posters/83068-2.jpg\",\"firstAired\":\"2008-8-20\",\"id\":83068,\"network\":\"BBC
+        Four\",\"overview\":\"Today, astonishing surgical breakthroughs are making
+        face transplants, limb transplants and a host of other previously undreamed
+        of operations possible. But getting here has not been a simple story of selfless
+        men working tirelessly in the pursuit of medical advancement. Instead it\u2019s
+        a bloodstained tale of blunders, arrogance, mishap and murder. In trying to
+        keep us alive, surgeons have all too often killed us off, and life-saving
+        solutions have often come from the most surprising places.\\r\\nBlood and
+        Guts is an incredible story of stolen corpses, medical fraud, lobotomized
+        patients \u2013 and every now and then courageous advances that have saved
+        the lives of millions around the world.\\r\\nYou may think twice before going
+        under the knife\u2026\",\"seriesName\":\"Blood and Guts: A History of Surgery\",\"slug\":\"blood-and-guts-a-history-of-surgery\",\"status\":\"Ended\"},{\"aliases\":[],\"banner\":\"/banners/posters/271023-1.jpg\",\"firstAired\":null,\"id\":271023,\"network\":\"SWR\",\"overview\":\"Blood
+        and Honor: Youth Under Hitler, 1982 (aka Blut und Ehre: Jugend Unter Hitler)
+        is a German/American made for TV mini-series which was a co-production between
+        Daniel Wilson Productions and S.W.F (Sudwestfunk) and Taurus Films. \\r\\nThe
+        original screenplay was by Helmut Kissel and was partly based on his own experience
+        as a member of the Hitler Youth. The scripts that were eventually shot, however,
+        were written by Robert Muller.  Helmut Kissel led as the director of the project
+        but was replaced by Bernd Fischerauer within the first couple of weeks when
+        shooting started. The shooting was on location in Baden-Baden, West Germany
+        with the first 4 weeks in August 1980 and the rest of the production was completed
+        between January through March in 1981.\\r\\nEach scene was shot both in English
+        and in German and resulted in two versions of the film. The post production
+        of the German version was completed in spring of 1982. It premiered on West
+        German TV in July 1982 and was watched by more than 50% of the available audience.
+        The American version premiered in November 1982 on various independent television
+        stations in the United States (KBHK-44, WPIX-TV, etc.). Blood and Honor: Youth
+        Under Hitler also received a Peabody Award in 1982 and was shown in 7 countries,
+        including the Netherlands, UK, Austria, and Israel.\",\"seriesName\":\"Blood
+        and Honor: Youth Under Hitler\",\"slug\":\"blood-and-honor-youth-under-hitler\",\"status\":\"Ended\"},{\"aliases\":[],\"banner\":\"/banners/posters/132041-1.jpg\",\"firstAired\":\"2008-4-22\",\"id\":132041,\"network\":\"BBC
+        Three\",\"overview\":\"Six young fashion lovers swap shopping for the factories
+        and backstreet workshops of India to learn how the clothes they wear are manufactured.
+        \",\"seriesName\":\"Blood Sweat And T-shirts\",\"slug\":\"blood-sweat-and-t-shirts\",\"status\":\"Ended\"}]}"
+    headers:
+      Cache-Control:
+      - private, max-age=86400
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 28 Nov 2019 17:22:40 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Language
+      Via:
+      - 1.1 76ebb2b2a599c264ac624f33b5da568f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - kdKY4SLabDb_JldiuRS6PWpmbATg9cLZhf1yqHXH8Cusifgc_d5oiA==
+      X-Amz-Cf-Pop:
+      - GIG51-C2
+      X-Cache:
+      - Miss from cloudfront
+      X-Powered-By:
+      - Thundar!
+      X-Thetvdb-Api-Version:
+      - 3.0.0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzU1NjY1NTksImlkIjoic3VibGltaW5hbCIsIm9yaWdfaWF0IjoxNTc0OTYxNzU5fQ.Qp0pwiik4yHa7n5GnLp92WGkXupxL2g1i-04CaoGcaZmJ1LULNgSB3xYni8UG8dvllYUlJ2V2gwdPmoILoL7e3DzwoJnLULl7oLgz_XBdrH-x74Sxo782FtXaQyL33Holr4royYJxhOMdDaBmpW03Il6E-XHAD5Ydd5s5UILYup2IQXTHgatPT9HBo0xsHY8fTD35l8eFrknCVjr_L9DDlVqsUhW_yZeTRucJ9OrQ9wKlqeAC6Of18XAjDyiAdmJu0Uv5GhmUR_S4D5mEMhAMW2wJPsNCjjq8B1vmoK-EiEEDgpCbdxUfNr1XCxaNHJi295I58WTMy7SKS10vCPDDA
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Subliminal/2.1
+    method: GET
+    uri: https://api.thetvdb.com/series/164981
+  response:
+    body:
+      string: '{"data":{"id":164981,"seriesId":"78706","seriesName":"Blue Bloods","aliases":[],"season":"10","poster":"posters/164981-1.jpg","banner":"graphical/164981-g4.jpg","fanart":"fanart/original/164981-2.jpg","status":"Continuing","firstAired":"2010-09-24","network":"CBS","networkId":"57","runtime":"45","language":"en","genre":["Crime","Drama"],"overview":"Blue
+        Bloods is a drama about a multi-generational family of cops dedicated to New
+        York City law enforcement. Frank Reagan is the New York Police Commissioner
+        and heads both the police force and the Reagan brood. He runs his department
+        as diplomatically as he runs his family, even when dealing with the politics
+        that plagued his unapologetically bold father, Henry, during his stint as
+        Chief.","lastUpdated":1573578322,"airsDayOfWeek":"Friday","airsTime":"10:00
+        PM","rating":"TV-14","imdbId":"tt1595859","zap2itId":"EP01280105","added":"2010-05-23
+        14:15:45","addedBy":6288,"siteRating":0,"siteRatingCount":0,"slug":"blue-bloods"}}'
+    headers:
+      Cache-Control:
+      - private, max-age=86400
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '981'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 28 Nov 2019 16:01:37 GMT
+      Last-Modified:
+      - Tue, 12 Nov 2019 17:05:22 GMT
+      Vary:
+      - Accept-Language
+      Via:
+      - 1.1 76ebb2b2a599c264ac624f33b5da568f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - Gccf8ptm09y918Y8jo4N2QVt-OKWHWyP9Bo5z8lZBcjxPhInEgq7Yw==
+      X-Amz-Cf-Pop:
+      - GIG51-C2
+      X-Cache:
+      - Hit from cloudfront
+      X-Powered-By:
+      - Thundar!
+      X-Thetvdb-Api-Version:
+      - 3.0.0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzU1NjY1NTksImlkIjoic3VibGltaW5hbCIsIm9yaWdfaWF0IjoxNTc0OTYxNzU5fQ.Qp0pwiik4yHa7n5GnLp92WGkXupxL2g1i-04CaoGcaZmJ1LULNgSB3xYni8UG8dvllYUlJ2V2gwdPmoILoL7e3DzwoJnLULl7oLgz_XBdrH-x74Sxo782FtXaQyL33Holr4royYJxhOMdDaBmpW03Il6E-XHAD5Ydd5s5UILYup2IQXTHgatPT9HBo0xsHY8fTD35l8eFrknCVjr_L9DDlVqsUhW_yZeTRucJ9OrQ9wKlqeAC6Of18XAjDyiAdmJu0Uv5GhmUR_S4D5mEMhAMW2wJPsNCjjq8B1vmoK-EiEEDgpCbdxUfNr1XCxaNHJi295I58WTMy7SKS10vCPDDA
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Subliminal/2.1
+    method: GET
+    uri: https://api.thetvdb.com/series/164981/episodes/query?airedSeason=10&airedEpisode=9&page=1
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA3RTTW/bMAz9K4J22CVtYtf9iIthaNps62E7rOt2KIqCsWhbiC0ZIh0vKPLfRzVJ
+        txQYfCEfHylK7/lZN9YtSefPurSBWOfJSDewCxz+lsD1TTPSXcDVNt6MtAEGnT88a2t0fp6dZifZ
+        dKTBBjR3COSdtE8OgNsbnV8k2fkk28HzzpI3+K1vFxh0Lu24Q6BFnevPAVao5iH4QHq03e4qNkot
+        nSTToyQ5SlOpVD0S3zEILX94lN2EVLDfp0OwjPvErzCsLA4yYx6sU8YSVAGR1GC5VqA6Whe1BQ62
+        UIV31DcMjt+TMKFyniwpXwrPgXNrBUXRE5oXaCHRpZobYzF2lsE7JlVjUAtPdKk+BXBLJf2lD4X0
+        sFctLFERQ1laV6miBldhbIksWmLHtoBGJvueL+XMwbfgVNGAbaUutBohGEW+Re9QdY1njoNAtX0w
+        GI51lNJVPVQYBT58X3T64D0k30SVvekLtt5dC1Xgd7NZMplMhUu1H+5DI5jeWuS+ExtEPZLT8yyb
+        TtNUtDUrc2OpiL6IPEn3htjaSIA3yr/i1zV0/BeBBfmm5ze80jbotjeIO2GwSLdxh7NsepEcLDZb
+        6zxNT6bZxdaKdFXK+MN1IjxDkQT/h++23RdsaxbxPF0zd5SPx8MwHEfwuPDtmC03OGZOkvRMvsn4
+        Y8Dy6QMzdk/YxVcUazA6/g5RKhnz4+dRkgnOtVzzqufav151CxmDu7d8yX9Zw/UB4wvaqn79TUnc
+        vh8++Te99r3jF8zSVy+iS7x53PwBAAD//wMAEWs2ZgEEAAA=
+    headers:
+      Cache-Control:
+      - private, max-age=86400
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 27 Nov 2019 19:45:55 GMT
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding,Accept-Language
+      Via:
+      - 1.1 76ebb2b2a599c264ac624f33b5da568f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - p6-fjVEivVQX0y3638xntNLoOPHTsqCHeVq34QiUVe-K3YUwCVgYQQ==
+      X-Amz-Cf-Pop:
+      - GIG51-C2
+      X-Cache:
+      - Hit from cloudfront
+      X-Powered-By:
+      - Thundar!
+      X-Thetvdb-Api-Version:
+      - 3.0.0
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Accept-Language:
+      - en
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1NzU1NjY1NTksImlkIjoic3VibGltaW5hbCIsIm9yaWdfaWF0IjoxNTc0OTYxNzU5fQ.Qp0pwiik4yHa7n5GnLp92WGkXupxL2g1i-04CaoGcaZmJ1LULNgSB3xYni8UG8dvllYUlJ2V2gwdPmoILoL7e3DzwoJnLULl7oLgz_XBdrH-x74Sxo782FtXaQyL33Holr4royYJxhOMdDaBmpW03Il6E-XHAD5Ydd5s5UILYup2IQXTHgatPT9HBo0xsHY8fTD35l8eFrknCVjr_L9DDlVqsUhW_yZeTRucJ9OrQ9wKlqeAC6Of18XAjDyiAdmJu0Uv5GhmUR_S4D5mEMhAMW2wJPsNCjjq8B1vmoK-EiEEDgpCbdxUfNr1XCxaNHJi295I58WTMy7SKS10vCPDDA
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Subliminal/2.1
+    method: GET
+    uri: https://api.thetvdb.com/episodes/7454349
+  response:
+    body:
+      string: '{"data":{"id":7454349,"airedSeason":10,"airedSeasonID":814704,"airedEpisodeNumber":9,"episodeName":"Grave
+        Errors","firstAired":"2019-11-22","guestStars":[],"directors":[],"writers":[],"overview":"Erin
+        disagrees with a psychiatric consultant''s diagnosis of a nanny accused of
+        abuse; Eddie confronts her boss; Frank is forced to make staffing changes
+        he is skeptical about; a woman claims she heard someone plotting a murder.","language":{"episodeName":"en","overview":"en"},"productionCode":"#BB1009","showUrl":"","lastUpdated":1574499224,"dvdDiscid":"","dvdSeason":null,"dvdEpisodeNumber":null,"dvdChapter":null,"absoluteNumber":null,"filename":"","seriesId":164981,"lastUpdatedBy":2239480,"airsAfterSeason":null,"airsBeforeSeason":null,"airsBeforeEpisode":null,"imdbId":"https://www.imdb.com/title/tt11262620/?ref_=ttep_ep9","contentRating":"TV-14","thumbAuthor":null,"thumbAdded":"","thumbWidth":null,"thumbHeight":null,"siteRating":0,"siteRatingCount":0,"isMovie":0}}'
+    headers:
+      Cache-Control:
+      - private, max-age=86400
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '970'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 27 Nov 2019 19:45:55 GMT
+      Last-Modified:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Vary:
+      - Accept-Language
+      Via:
+      - 1.1 76ebb2b2a599c264ac624f33b5da568f.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - 8JEZc__-tSJQy8QdiRaS9pG7HaP6V71G64fNsgrNw_9xZhssvX_CRA==
+      X-Amz-Cf-Pop:
+      - GIG51-C2
+      X-Cache:
+      - Hit from cloudfront
+      X-Powered-By:
+      - Thundar!
+      X-Thetvdb-Api-Version:
+      - 3.0.0
+    status:
+      code: 200
+      message: OK
+version: 1

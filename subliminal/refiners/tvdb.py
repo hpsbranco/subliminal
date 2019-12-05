@@ -242,6 +242,13 @@ def get_series_episode(series_id, season, episode):
         return tvdb_client.get_episode(result['data'][0]['id'])
 
 
+def match_imdb_id(string):
+    match = re.search(r'(tt\d{7,})', string)
+    if match is None:
+        return None
+    return match.group(1)
+
+
 def refine(video, **kwargs):
     """Refine a video by searching `TheTVDB <http://thetvdb.com/>`_.
 
@@ -356,7 +363,7 @@ def refine(video, **kwargs):
     video.country = matching_result['match']['country']
     video.original_series = matching_result['match']['original_series']
     video.series_tvdb_id = series['id']
-    video.series_imdb_id = series['imdbId'] or None
+    video.series_imdb_id = match_imdb_id(series['imdbId'])
 
     # get the episode
     logger.info('Getting series episode %dx%d', video.season, video.episode)
@@ -369,4 +376,4 @@ def refine(video, **kwargs):
     logger.debug('Found episode %r', episode)
     video.tvdb_id = episode['id']
     video.title = episode['episodeName'] or None
-    video.imdb_id = episode['imdbId'] or None
+    video.imdb_id = match_imdb_id(episode['imdbId'])

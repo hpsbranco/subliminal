@@ -9,7 +9,7 @@ from vcr import VCR
 
 from subliminal import __short_version__
 from subliminal.video import Episode
-from subliminal.refiners.tvdb import TVDBClient, refine, series_re
+from subliminal.refiners.tvdb import TVDBClient, refine, series_re, match_imdb_id
 
 vcr = VCR(path_transformer=lambda path: path + '.yaml',
           record_mode=os.environ.get('VCR_RECORD_MODE', 'once'),
@@ -63,6 +63,25 @@ def test_language():
     client.language = 'fr'
     assert client.session.headers['Accept-Language'] == 'fr'
     assert client.language == 'fr'
+
+
+def test_match_imdb_id():
+    imdb_id = 'tt11262620'
+    assert match_imdb_id(imdb_id) == imdb_id
+
+
+def test_match_imdb_id_empty():
+    assert match_imdb_id('') is None
+
+
+def test_match_imdb_id_no_match():
+    assert match_imdb_id('ttnotanumber') is None
+
+
+def test_match_imdb_id_url():
+    imdb_id = 'tt11262620'
+    url = 'https://www.imdb.com/title/{}/?ref_=ttep_ep9'.format(imdb_id)
+    assert match_imdb_id(url) == imdb_id
 
 
 def test_session():
@@ -398,3 +417,14 @@ def test_refine_episode_with_country_hoc_us(episodes):
     assert episode.tvdb_id == video.tvdb_id
     assert episode.series_tvdb_id == video.series_tvdb_id
     assert episode.alternative_series == video.alternative_series
+
+
+@pytest.mark.integration
+@vcr.use_cassette
+def test_refine_episode_match_imdb_id():
+    episode = Episode('Blue.Bloods.S10E09.mkv', 'Blue Bloods', 10, 9)
+    refine(episode)
+    assert episode.imdb_id == 'tt11262620'
+    assert episode.series_imdb_id == 'tt1595859'
+    assert episode.tvdb_id == 7454349
+    assert episode.series_tvdb_id == 164981
