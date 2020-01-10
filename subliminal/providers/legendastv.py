@@ -14,6 +14,8 @@ import rarfile
 from rarfile import RarFile, is_rarfile
 from rebulk.loose import ensure_list
 from requests import Session
+from requests.adapters import HTTPAdapter
+from urllib3 import Retry
 from zipfile import ZipFile, is_zipfile
 
 from . import ParserBeautifulSoup, Provider
@@ -176,6 +178,9 @@ class LegendasTVProvider(Provider):
     def initialize(self):
         self.session = Session()
         self.session.headers['User-Agent'] = self.user_agent
+
+        retry = Retry(total=3, backoff_factor=0.1)
+        self.session.mount('http://', HTTPAdapter(max_retries=retry))
 
         # login
         if self.username and self.password:
