@@ -29,7 +29,6 @@ Available matches:
   * tvdb_id
 
 """
-from __future__ import division, print_function
 import logging
 
 from .video import Episode, Movie

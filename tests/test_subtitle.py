@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
 
-import six
 from babelfish import Language
 
 from subliminal.subtitle import Subtitle, fix_line_ending, get_subtitle_path
@@ -94,7 +93,7 @@ def test_subtitle_guess_encoding_utf8():
     subtitle = Subtitle(Language('zho'), False, None, None)
     subtitle.content = b'Something here'
     assert subtitle.guess_encoding() == 'utf-8'
-    assert isinstance(subtitle.text, six.text_type)
+    assert isinstance(subtitle.text, str)
 
 
 # regression for #921
@@ -105,4 +104,4 @@ def test_subtitle_text_guess_encoding_none():
 
     assert subtitle.guess_encoding() is None
     assert not subtitle.is_valid()
-    assert not isinstance(subtitle.text, six.text_type)
+    assert not isinstance(subtitle.text, str)

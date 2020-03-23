@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*-
-from __future__ import division
-
 from babelfish import Language
 
 from subliminal.providers.addic7ed import Addic7edSubtitle

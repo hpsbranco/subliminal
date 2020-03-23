@@ -3,7 +3,6 @@
 Subliminal uses `click <http://click.pocoo.org>`_ to provide a powerful :abbr:`CLI (command-line interface)`.
 
 """
-from __future__ import division
 from collections import defaultdict
 from datetime import timedelta
 import glob
